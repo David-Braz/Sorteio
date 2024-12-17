@@ -1,0 +1,33 @@
+	--- Banco de Dados para o Sorteio ---
+	
+	CREATE DATA BASE Sorteio;
+	
+	--- Tabela dos Brindes a Serem Sorteados ---
+	
+	CREATE TABLE Tab_Brindes(
+		ID_Brindes INT NOT NULL PRIMARY KEY, 
+		Descricao VARCHAR(50)
+	);
+	
+	--- Tabela dos Participantes ---
+	
+	CREATE TABLE Tab_User(
+		ID_User INT NOT NULL PRIMARY KEY,
+		Nome VARCHAR(50),
+		Departamento VARCHAR (50),
+	);
+	
+	--- Tabela dos Sorteados ---
+	
+	CREATE TABLE Tab_Sorteio(
+		ID_User INT NOT NULL,
+		ID_Brindes INT NOT NULL,
+		Nome VARCHAR(50) NOT NULL,
+		Setor VARCHAR(50) NOT NULL
+	);
+
+	--- Não Houve Criação de chave estrangeira ---
+	--- Porque os sorteados são Excluidos ---
+	--- Da tabela Usuarios e brindes !!! ---
+	
+	
